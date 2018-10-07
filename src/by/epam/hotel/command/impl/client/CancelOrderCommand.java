@@ -29,7 +29,7 @@ public class CancelOrderCommand implements ActionCommand {
 		HttpSession session = request.getSession();
 		SessionData sessionData = (SessionData) session.getAttribute(AttributeConstant.SESSION_DATA);
 		if (sessionData.getRole() == RoleType.CLIENT) {
-			int orderIndex = Integer.parseInt(request.getParameter(ParameterConstant.ORDER_ID)) ;
+			int orderIndex = Integer.parseInt(request.getParameter(ParameterConstant.ORDER_INDEX)) ;
 			FullInfoOrder orderToCancel =sessionData.getListAccountFullInfoOrder().get(--orderIndex);
 			BigDecimal returnedSum = calculateReturnSum(orderToCancel);
 			request.setAttribute(AttributeConstant.RETURNED_SUM, returnedSum);
