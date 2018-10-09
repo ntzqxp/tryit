@@ -6,6 +6,7 @@
 <html>
 <head>
 <title><fmt:message key="title" /></title>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <jsp:include page="/locale" />
